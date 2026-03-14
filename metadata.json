@@ -1,0 +1,5 @@
+{
+  "name": "SecureVault",
+  "description": "Your digital documents, encrypted & protected. A secure vault for passwords, ID cards, and private notes with biometric login and real-time sync.",
+  "requestFramePermissions": []
+}

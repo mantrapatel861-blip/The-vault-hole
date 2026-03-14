@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  /* Smooth scrolling for all overflow containers */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.violet.200') transparent;
+  }
+
+  .dark * {
+    scrollbar-color: theme('colors.slate.800') transparent;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .overflow-y-auto, .overflow-auto, .overflow-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+}
